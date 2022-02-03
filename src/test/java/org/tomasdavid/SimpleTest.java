@@ -37,7 +37,7 @@ public class SimpleTest {
         final String corsProxyAppName = "cors-proxy";
         final String corsProxyServiceName = "cors-proxy-service";
         final String corsProxyRouteName = "cors-proxy-route";
-        final String corsProxyImageUrl = "quay.io/caponetto/cors-proxy-image:latest";
+        final String corsProxyImageUrl = "quay.io/kogito_tooling_bot/cors-proxy-image:latest";
         final int corsProxyPort = 8080;
 
         createApp(corsProxyAppName, projectName, createContainer(corsProxyAppName, corsProxyImageUrl));
@@ -47,7 +47,7 @@ public class SimpleTest {
         final String extendedServicesAppName = "extended-services";
         final String extendedServicesServiceName = "extended-services-service";
         final String extendedServicesRouteName = "extended-services-route";
-        final String extendedServicesImageUrl = "quay.io/caponetto/kie-sandbox-extended-services-image:latest";
+        final String extendedServicesImageUrl = "quay.io/kogito_tooling_bot/kie-sandbox-extended-services-image:latest";
         final int extendedServicesPort = 21345;
 
         createApp(extendedServicesAppName, projectName, createContainer(extendedServicesAppName, extendedServicesImageUrl));
@@ -57,7 +57,7 @@ public class SimpleTest {
         final String kieSanboxAppName = "kie-sandbox";
         final String kieSanboxServiceName = "kie-sandbox-service";
         final String kieSanboxRouteName = "kie-sandbox-route";
-        final String kieSanboxImageUrl = "quay.io/caponetto/kie-sandbox-image:latest";
+        final String kieSanboxImageUrl = "quay.io/kogito_tooling_bot/kie-sandbox-image:latest";
         final int kieSanboxPort = 8080;
 
         SimpleEntry corsProxyUrl = new SimpleEntry<>("CORS_PROXY_URL", "https://" + corsProxyRoute.getSpec().getHost());
