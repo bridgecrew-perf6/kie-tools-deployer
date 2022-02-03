@@ -27,9 +27,10 @@ public class SimpleTest {
 
         final String projectName = "tdavid-test";
         final String openShiftUrl = System.getProperty("openshift.url");
-        final String token = System.getProperty("openshift.token");
+        final String openShiftUser = System.getProperty("openshift.user");
+        final String openShiftPassword = System.getProperty("openshift.password");
 
-        openShiftClient = createOpenShiftClient(openShiftUrl, token);
+        openShiftClient = createOpenShiftClient(openShiftUrl, openShiftUser, openShiftPassword);
 
         createProject(projectName);
 
@@ -70,11 +71,12 @@ public class SimpleTest {
         System.out.println("https://" + kieSandboxUrl);
     }
 
-    public OpenShiftClient createOpenShiftClient(String openShiftUrl, String token) {
+    public OpenShiftClient createOpenShiftClient(String openShiftUrl, String openShiftUser, String openShiftPassword) {
         return new DefaultOpenShiftClient(
                 new ConfigBuilder()
                         .withMasterUrl(openShiftUrl)
-                        .withOauthToken(token)
+                        .withUsername(openShiftUser)
+                        .withPassword(openShiftPassword)
                         .build()
         );
     }
