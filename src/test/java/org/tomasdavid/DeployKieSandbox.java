@@ -18,12 +18,12 @@ import io.fabric8.openshift.client.DefaultOpenShiftClient;
 import io.fabric8.openshift.client.OpenShiftClient;
 import org.junit.Test;
 
-public class SimpleTest {
+public class DeployKieSandbox {
 
     private OpenShiftClient openShiftClient;
 
     @Test
-    public void justPass() {
+    public void deployAllImages() {
 
         final String projectName = "tdavid-test";
         final String openShiftUrl = System.getProperty("openshift.url");
