@@ -20,6 +20,7 @@ public class App {
                 final OpenShiftClient openShiftClient = new DefaultOpenShiftClient(
                         new ConfigBuilder()
                                 .withMasterUrl(url)
+                                .withTrustCerts(true)
                                 .withUsername(user)
                                 .withPassword(password)
                                 .build()
